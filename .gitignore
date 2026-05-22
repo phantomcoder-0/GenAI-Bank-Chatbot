@@ -1,0 +1,21 @@
+# Virtual Environment (Keep local, hide from GitHub)
+venv/
+ENV/
+env/
+
+# API Keys and Secrets (Critical Security)
+.env
+
+# Python Compilation Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local Database & Instance Folders
+instance/
+.pytest_cache/
+
+# Operating System Files
+.DS_Store
+Thumps.db

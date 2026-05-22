@@ -1,0 +1,27 @@
+========================================================================
+GENAI BANK OFFICIAL POLICY MANUAL - INTERNAL USE ONLY
+========================================================================
+
+1. PERSONAL LOAN POLICY & INTEREST RATES
+GenAI Bank offers Personal Loans to pre-approved salary-earning individuals aged between 21 and 60 years. 
+* The standard interest rate for a GenAI Bank Personal Loan is 10.5% per annum.
+* The maximum loan tenure allowed is 60 months (5 years).
+* A processing fee of 1.5% of the total loan amount is applicable to all applicants, capped at a maximum of 15,000 INR.
+* Foreclosure charges are completely waived if the loan is closed after 12 successful EMI payments. If foreclosed before 12 months, a 3% penalty on the principal outstanding applies.
+
+2. GENAI PLATINUM CREDIT CARD TERMS
+The GenAI Platinum Credit Card is a zero-annual-fee card tailored for digital-first users.
+* Reward Points: Users earn 5 Reward Points for every 100 INR spent on online dining and international travel. All other spends earn 1 Reward Point per 100 INR.
+* Interest-Free Period: Up to 48 days of interest-free credit from the date of purchase.
+* Late Payment Charges: If the Minimum Amount Due is not paid by the due date, a late fee of 500 INR is charged for balances between 5,000 and 20,000 INR. For balances above 20,000 INR, the late fee is 1,000 INR.
+* Cash Advance Fee: Cash withdrawals from ATMs using the credit card incur a transaction fee of 2.5% or 300 INR (whichever is higher).
+
+3. SAVINGS ACCOUNT STANDARD FAQS
+Q: What is the minimum balance required for a GenAI Savings Account?
+A: For Metro and Urban branches, the Monthly Average Balance (MAB) requirement is 5,000 INR. For Semi-Urban and Rural branches, it is 2,500 INR.
+
+Q: What happens if I fail to maintain the Monthly Average Balance?
+A: A non-maintenance penalty of 100 INR per month is levied for Metro/Urban accounts, and 50 INR per month for Semi-Urban/Rural accounts.
+
+Q: What is the current interest rate on savings account deposits?
+A: Deposits up to 5 Lakh INR earn 3.5% interest per annum. Deposits above 5 Lakh INR earn 4.0% interest per annum, compounded quarterly.
