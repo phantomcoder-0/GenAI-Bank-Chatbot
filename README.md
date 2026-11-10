@@ -1,35 +1,61 @@
-# GenAI Bank Support Chatbot
+# GenAI Bank Chatbot
 
-An intelligent AI-powered banking assistant that combines Large Language Model (LLM) capabilities with Retrieval-Augmented Generation (RAG) to provide accurate information about GenAI Bank's products, services, loan procedures, and financial policies.
+An AI banking assistant that answers questions about a bank's products, loans, services, and policies — using only the bank's own documents as its source of truth.
 
-This project is fully optimized to perform fast local embedding searches and utilizes high-performance cloud generation to provide grounded customer support answers with source citations.
+It pairs an LLM with RAG (Retrieval-Augmented Generation): the app first searches the bank's documents for the relevant passages, then the LLM writes the answer from those passages only. That keeps answers grounded and cuts down on made-up information.
 
-## Key Features
+## Features
 
-* **RAG-Powered Responses:** Ingests official policy documents (.txt, .pdf) and runs precise context retrieval.
-* **Context Retention (Memory):** Tracks session history over multiple turns to correctly handle follow-up pronoun inquiries.
-* **Interactive UI/UX:** Responsive chat interface featuring a custom fluid typing animation and dynamic visual source citation chips.
-* **Secure Sessions:** Leverages JWT bearer token validation states to manage customer connection authentication.
+- RAG answers built from the bank's policy documents (.txt and .pdf)
+- Fast local vector search with FAISS, so retrieval takes milliseconds
+- Conversation memory — follow-up questions like "and what about car loans?" actually work
+- Source citations shown as chips under each answer, so you can see where it came from
+- Secure sessions with JWT token validation
+- Clean chat UI with a smooth typing animation
 
-## Setup and Installation
+## How it works
 
-### 1. Prerequisites
-Ensure you have Python 3.10+ installed on your system.
+1. The bank's documents are loaded, split into chunks, and stored as embeddings in a FAISS vector index.
+2. A customer asks a question in the chat.
+3. The app retrieves the most relevant chunks for that question.
+4. A fast cloud LLM (Groq) writes the answer using only those chunks.
+5. The answer appears in the chat along with its source citations.
 
-### 2. Environment Configuration
-Create a file named `.env` in the root directory and define the following variables:
+## Tech stack
 
-GROQ_API_KEY="your_groq_api_key"
-SECRET_KEY="your_jwt_auth_signing_secret"
+- Flask — web app and API
+- LangChain — the RAG pipeline
+- FAISS — local vector store for fast similarity search
+- Sentence Transformers — text embeddings
+- Groq — fast LLM generation
+- PyJWT — secure session tokens
 
-### 3. Install Dependencies
-Run the following command in your terminal to install the required packages:
+## Getting started
 
-pip install -r requirements.txt
+1. Install Python 3.10+ and the dependencies:
 
-### 4. Build Knowledge Base & Launch Application
-Place your banking policy documents or FAQs inside the `uploads/` directory. Run the server to automatically index the documents and start the application:
+   pip install -r requirements.txt
 
-python app.py
+2. Create a .env file in the project root:
 
-Once the server is running, open your browser and navigate to http://localhost:3000 to interact with the chatbot.
+   GROQ_API_KEY="your_groq_api_key"
+   SECRET_KEY="your_jwt_secret"
+
+3. Run the app:
+
+   python app.py
+
+4. Open http://localhost:3000 in your browser and start chatting. The port can be changed with the PORT environment variable.
+
+## Project structure
+
+- app.py — Flask entry point
+- chatbot/ — RAG logic: document loading, chunking, retrieval, and generation
+- docs/ — documentation
+- static/ — styles and chat JavaScript
+- templates/ — HTML pages
+- uploads/ — documents uploaded through the app
+
+## License
+
+MIT — use it, change it, build on it.
